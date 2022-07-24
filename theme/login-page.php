@@ -1,5 +1,5 @@
 <?php
-global $wp_version, $dsl_site_protect, $is_iphone;
+global $wp_version, $wp_site_protect, $is_iphone;
 nocache_headers();
 header( 'Content-Type: ' . get_bloginfo( 'html_type' ) . '; charset=' . get_bloginfo( 'charset' ) )
 ?>
@@ -68,7 +68,7 @@ if ( $is_iphone ) {
 <p>If all above efforts are unsuccessful, please email us: <a href='mailto:info@acementor.org'>info@acementor.org</a></p>
 </div>
 
-<form name="loginform" id="loginform" action="<?php echo esc_url( $dsl_site_protect->login_url() ); ?>" method="post">
+<form name="loginform" id="loginform" action="<?php echo esc_url( $wp_site_protect->login_url() ); ?>" method="post">
 <?php do_action( 'dsl_error_messages' ); ?>
 
 <p>
